@@ -1,3 +1,72 @@
+**Improvements**
+
+* POST: http://localhost:8080/search
+
+```javascript{
+{
+  "origin": "LHR",
+  "destination": "GRU",
+  "departureDate": "2020-02-19:12:00:00",
+  "returnDate": "2020-02-20:12:30:00",
+  "numberOfPassengers": "2"
+}
+```
+
+* POST: http://localhost:8080/crazyAir
+
+```javascript{
+{
+  "origin": "LHR",
+  "destination": "GRU",
+  "departureDate": "2020-02-19:12:00:00",
+  "returnDate": "2020-02-20:12:30:00",
+  "passengerCount": "2"
+}
+```
+
+* POST: http://localhost:8080/crazyAirOneFlight
+
+```javascript{
+{
+  "origin": "LHR",
+  "destination": "GRU",
+  "departureDate": "2020-02-19:12:00:00",
+  "returnDate": "2020-02-20:12:30:00",
+  "passengerCount": "2"
+}
+```
+* POST: http://localhost:8080/toughJet
+
+```javascript{
+{
+  "from": "GRU",
+  "to": "LHR",
+  "outboundDate": "2020-02-19:12:00:00",
+  "inboundDate": "2020-02-20:12:30:00",
+  "numberOfAdults": "2"
+}
+```
+
+* POST: http://localhost:8080/toughJetOneFlight
+
+```javascript{
+{
+  "from": "GRU",
+  "to": "LHR",
+  "outboundDate": "2020-02-19:12:00:00",
+  "inboundDate": "2020-02-20:12:30:00",
+  "numberOfAdults": "2"
+}
+```
+**Docker**
+
+Exists a Dockerfile prepared to download a Centos OS, install the **openjdk11** and install the application.
+
+- Run the command: `docker build -t travix/interview-test:release .`
+- Run the command: `docker run -p port:port <IMG_TAG>`
+- Example: `docker run -p 8080:8080 8fb870f41548`
+- Or download the image `docker push samueldnc/samuelcatalano:travix`
+
 **Travix - Problem to be solved**
 
 **Background:**
